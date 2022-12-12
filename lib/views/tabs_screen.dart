@@ -5,11 +5,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_task/controllers/tabs_controller.dart';
 import 'package:flutter_task/utils/app_dimensions.dart';
 import 'package:flutter_task/utils/theme_provider.dart';
-import 'package:flutter_task/views/cart_screen.dart';
-import 'package:flutter_task/views/favorites_screen.dart';
-import 'package:flutter_task/views/grocery_screen.dart';
-import 'package:flutter_task/views/news_screen.dart';
-import 'package:flutter_task/views/shop_screen.dart';
 import 'package:get/get.dart';
 
 class TabsScreen extends StatefulWidget {
