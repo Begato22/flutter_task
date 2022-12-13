@@ -32,7 +32,7 @@ class _TabsScreenState extends State<TabsScreen> {
               FloatingActionButtonLocation.centerDocked,
           bottomNavigationBar: AnimatedBottomNavigationBar.builder(
             activeIndex: controller.bottomNavIndex,
-            backgroundColor: Colors.grey.shade200,
+            backgroundColor: ThemeProvider.lightGrey,
             height: 65.h,
             gapLocation: GapLocation.center,
             notchMargin: 0,
@@ -43,7 +43,7 @@ class _TabsScreenState extends State<TabsScreen> {
             itemCount: controller.icons.length,
             tabBuilder: (int index, bool isActive) {
               final color =
-                  isActive ? ThemeProvider.appColor : Colors.grey.shade400;
+                  isActive ? ThemeProvider.appColor : ThemeProvider.grey;
               return tabBuilder(index, color, controller);
             },
             //other params
@@ -69,7 +69,7 @@ class _TabsScreenState extends State<TabsScreen> {
           Padding(
             padding: AppDimensions.sSymetricPadding,
             child: AutoSizeText(
-              "brightness $index",
+              controller.tabsLabel[index],
               maxLines: 1,
               style: TextStyle(color: color),
               group: AutoSizeGroup(),

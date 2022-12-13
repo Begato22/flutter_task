@@ -11,9 +11,15 @@ class TabsController extends GetxController{
   List<Widget> screens = const [
     GroceryScreen(),
     NewsScreen(),
-    ShopScreen(),
+    // ShopScreen(),
     FavoritesScreen(),
     CartScreen()
+  ];
+  List<String> tabsLabel = [
+    'Grocery',
+    'News',
+    'Favorites',
+    'Cart',
   ];
   List<IconData> icons = [
     Icons.shop,
