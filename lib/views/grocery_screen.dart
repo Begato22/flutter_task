@@ -1,9 +1,4 @@
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_task/utils/app_dimensions.dart';
 import 'package:flutter_task/utils/theme_provider.dart';
@@ -25,7 +20,7 @@ class GroceryScreen extends StatelessWidget {
                   size: Size(0.3.sw, 35.h),
                   painter: RPSCustomPainter(),
                 ),
-                Spacer(),
+                const Spacer(),
                 Container(
                   height: 30.h,
                   width: 30.h,
@@ -57,7 +52,7 @@ class GroceryScreen extends StatelessWidget {
               ),
             ),
             SizedBox(height: 20.h),
-            Container(
+            SizedBox(
               height: 50.h,
               child: ListView.separated(
                 scrollDirection: Axis.horizontal,
@@ -82,7 +77,7 @@ class GroceryScreen extends StatelessWidget {
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Container(
+                            SizedBox(
                                 width: 95.w,
                                 child: Text(
                                   'Home Address',
@@ -92,7 +87,7 @@ class GroceryScreen extends StatelessWidget {
                                       overflow: TextOverflow.ellipsis),
                                   maxLines: 1,
                                 )),
-                            Container(
+                            SizedBox(
                               width: 95.w,
                               child: Text(
                                 'this location here founded',
@@ -123,7 +118,7 @@ class GroceryScreen extends StatelessWidget {
                   'Explore by Category',
                   style: ThemeProvider.headTitle1,
                 ),
-                Spacer(),
+                const Spacer(),
                 Text(
                   'See All(23)',
                   style: ThemeProvider.hintTextStyle,
@@ -131,11 +126,11 @@ class GroceryScreen extends StatelessWidget {
               ],
             ),
             SizedBox(height: 20.h),
-            Container(
+            SizedBox(
               height: 90.h,
               child: ListView.separated(
                 scrollDirection: Axis.horizontal,
-                physics: BouncingScrollPhysics(),
+                physics: const BouncingScrollPhysics(),
                 itemBuilder: (context, index) {
                   return buildCategory();
                 },
@@ -157,7 +152,7 @@ class GroceryScreen extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
                 itemBuilder: (context, index) {
                   return Stack(children: [
-                    Container(
+                    SizedBox(
                       width: 0.65.sw,
                       height: 100.h,
                       child: Row(
@@ -174,8 +169,8 @@ class GroceryScreen extends StatelessWidget {
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              SizedBox(height: 15),
-                              Container(
+                              const SizedBox(height: 15),
+                              SizedBox(
                                 width: 0.37.sw,
                                 child: Text(
                                   'Summer Sun Ice Cream Pack',
@@ -226,7 +221,7 @@ class GroceryScreen extends StatelessWidget {
                     Container(
                       width: 20.w,
                       height: 20.w,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                           shape: BoxShape.circle, color: Colors.white),
                       child: Icon(
                         Icons.favorite,
@@ -286,7 +281,7 @@ class RPSCustomPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     Paint paint0 = Paint()
-      ..color = Color.fromARGB(255, 211, 159, 180)
+      ..color = const Color.fromARGB(255, 211, 159, 180)
       ..style = PaintingStyle.fill
       ..strokeWidth = 3.0;
 
