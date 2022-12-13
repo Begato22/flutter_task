@@ -33,7 +33,7 @@ class _TabsScreenState extends State<TabsScreen> {
           bottomNavigationBar: AnimatedBottomNavigationBar.builder(
             activeIndex: controller.bottomNavIndex,
             backgroundColor: ThemeProvider.lightGrey,
-            height: 65.h,
+            height: 40.h,
             gapLocation: GapLocation.center,
             notchMargin: 0,
             notchSmoothness: NotchSmoothness.sharpEdge,
@@ -68,11 +68,11 @@ class _TabsScreenState extends State<TabsScreen> {
           const SizedBox(height: 4),
           Padding(
             padding: AppDimensions.sSymetricPadding,
-            child: AutoSizeText(
+            child: Text(
               controller.tabsLabel[index],
               maxLines: 1,
-              style: TextStyle(color: color),
-              group: AutoSizeGroup(),
+              style: TextStyle(color: color,fontSize: 9.sp),
+              // group: AutoSizeGroup(),
             ),
           )
         ],

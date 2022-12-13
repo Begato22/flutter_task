@@ -26,4 +26,9 @@ class ThemeProvider {
 //TextSyle
 
 static final subTitle = TextStyle(fontSize: 12.sp,color: ThemeProvider.grey);
+static final hintTextStyle = TextStyle(color: ThemeProvider.grey,fontWeight: FontWeight.bold,fontSize: 10.sp);
+static final headTitle1 = TextStyle(fontWeight: FontWeight.bold,fontSize: 12.sp);
+static final headTitle2 = TextStyle(fontWeight: FontWeight.bold,fontSize: 10.sp,overflow: TextOverflow.ellipsis);
+static final importantTextStyle =TextStyle(color: ThemeProvider.appColor,fontWeight: FontWeight.bold,fontSize: 12.sp);
+static final lineTextStyle =TextStyle(color: grey,fontWeight: FontWeight.bold,fontSize: 12.sp,decoration: TextDecoration.lineThrough);
 }
