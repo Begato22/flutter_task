@@ -115,4 +115,33 @@ class JsonData {
       }
     ]
   };
+   static const Map<String, dynamic> products = {
+    "status": 200,
+    "data": [
+      {
+        "id":1,
+        "name": "Turkish Steak",
+        "value": "173 Grams",
+         "price": "25"
+      },
+     {
+        "id":2,
+        "name": "Salmon",
+        "value": "2 Serving",
+         "price": "30"
+      },
+       {
+        "id":3,
+        "name": "Red Juice",
+        "value": "1 Bottle",
+         "price": "25"
+      },
+       {
+        "id":4,
+        "name": "Cola",
+        "value": "1 Bottle",
+         "price": "11"
+      }
+    ]
+  };
 }

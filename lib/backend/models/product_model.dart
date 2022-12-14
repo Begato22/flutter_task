@@ -1,14 +1,14 @@
 // ignore_for_file: no_leading_underscores_for_local_identifiers
 
-class CategoryModel {
-  CategoryModel({
+class ProductModel {
+  ProductModel({
     required this.status,
     required this.data,
   });
   late final int status;
   late final List<Data> data;
 
-  CategoryModel.fromJson(Map<String, dynamic> json) {
+  ProductModel.fromJson(Map<String, dynamic> json) {
     status = json['status'];
     data = List.from(json['data']).map((e) => Data.fromJson(e)).toList();
   }
@@ -23,21 +23,29 @@ class CategoryModel {
 
 class Data {
   Data({
+    required this.id,
     required this.name,
-    required this.itemsNumber,
+    required this.value,
+    required this.price,
   });
+  late final int id;
   late final String name;
-  late final int itemsNumber;
+  late final String value;
+  late final String price;
 
   Data.fromJson(Map<String, dynamic> json) {
+    id = json['id'];
     name = json['name'];
-    itemsNumber = json['items_number'];
+    value = json['value'];
+    price = json['price'];
   }
 
   Map<String, dynamic> toJson() {
     final _data = <String, dynamic>{};
+    _data['id'] = id;
     _data['name'] = name;
-    _data['items_number'] = itemsNumber;
+    _data['value'] = value;
+    _data['price'] = price;
     return _data;
   }
 }

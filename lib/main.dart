@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_task/envirmoent.dart';
 import 'package:flutter_task/utils/theme_provider.dart';
 import 'package:flutter_task/views/tabs_screen.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
@@ -26,8 +27,8 @@ class MyApp extends StatelessWidget {
       splitScreenMode: true,
       builder: (BuildContext context, Widget? child) {
         return GetMaterialApp(
-          debugShowCheckedModeBanner: false,
-          title: 'Flutter Demo',
+          debugShowCheckedModeBanner: Envirmoent.isDebug,
+          title: Envirmoent.appName,
           theme: ThemeData(
             primarySwatch: MaterialColor(ThemeProvider.appColorMaped[50]!.value,
                 ThemeProvider.appColorMaped),

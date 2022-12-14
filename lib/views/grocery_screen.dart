@@ -62,7 +62,7 @@ class GroceryScreen extends StatelessWidget {
                               height: 40.w,
                               decoration: BoxDecoration(
                                 borderRadius: AppDimensions.borderRadius,
-                                color: Colors.teal,
+                                color: ThemeProvider.addressColor,
                               ),
                             ),
                             SizedBox(width: 7.w),
@@ -153,7 +153,7 @@ class GroceryScreen extends StatelessWidget {
                                 height: 80.h,
                                 width: 80.h,
                                 decoration: BoxDecoration(
-                                  color: Colors.yellow,
+                                  color: ThemeProvider.appColorsList[index+2],
                                   borderRadius: BorderRadius.circular(20.r),
                                 ),
                               ),
@@ -244,7 +244,7 @@ class GroceryScreen extends StatelessWidget {
                     child: Container(
                   width: double.infinity,
                   decoration: BoxDecoration(
-                      color: Colors.pink[200],
+                      color: ThemeProvider.bannersColor,
                       borderRadius: BorderRadius.circular(20.r)),
                 )),
                 SizedBox(height: 40.h),
@@ -265,7 +265,7 @@ class GroceryScreen extends StatelessWidget {
             width: 60.w,
             height: 60.h,
             decoration: BoxDecoration(
-              color: Colors.yellow,
+              color: ThemeProvider.appColorsList[index],
               borderRadius: AppDimensions.borderRadius,
             ),
           ),

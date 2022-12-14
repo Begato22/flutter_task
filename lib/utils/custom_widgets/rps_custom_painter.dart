@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_task/utils/theme_provider.dart';
 
 class RPSCustomPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     Paint paint0 = Paint()
-      ..color = const Color.fromARGB(255, 211, 159, 180)
+      ..color =  ThemeProvider.darkPinkColor
       ..style = PaintingStyle.fill
       ..strokeWidth = 3.0;
 

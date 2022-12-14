@@ -1,3 +1,5 @@
+// ignore_for_file: no_leading_underscores_for_local_identifiers
+
 class DealModel {
   DealModel({
     required this.status,
@@ -6,15 +8,15 @@ class DealModel {
   late final int status;
   late final List<Data> data;
 
-  DealModel.fromJson(Map<String, dynamic> json){
+  DealModel.fromJson(Map<String, dynamic> json) {
     status = json['status'];
-    data = List.from(json['data']).map((e)=>Data.fromJson(e)).toList();
+    data = List.from(json['data']).map((e) => Data.fromJson(e)).toList();
   }
 
   Map<String, dynamic> toJson() {
     final _data = <String, dynamic>{};
     _data['status'] = status;
-    _data['data'] = data.map((e)=>e.toJson()).toList();
+    _data['data'] = data.map((e) => e.toJson()).toList();
     return _data;
   }
 }
@@ -35,7 +37,7 @@ class Data {
   late final int price;
   late final int oldPrice;
 
-  Data.fromJson(Map<String, dynamic> json){
+  Data.fromJson(Map<String, dynamic> json) {
     dealId = json['deal_id'];
     dealName = json['deal_name'];
     pieces = json['pieces'];
