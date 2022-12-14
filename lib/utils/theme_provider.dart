@@ -6,7 +6,7 @@ class ThemeProvider {
   //colors
   static Color appColor = HexColor('#d93e11');
   static Color lightGrey = HexColor('#f4f9fa');
-  static Color grey = HexColor('#565759');
+  static Color grey = Colors.grey;
   static Color bannersColor = HexColor('#fec8bd');
   static Color addressColor = HexColor('#e3ddd6');
   static Color dealColor = HexColor('#fec8bd');

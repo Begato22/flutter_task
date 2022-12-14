@@ -26,11 +26,11 @@ class CartScreen extends StatelessWidget {
               SizedBox(height: 30.h),
               Text(
                 'Cart',
-                style: ThemeProvider.headTitle1,
+                style: ThemeProvider.headTitle1.copyWith(fontSize: 16.sp),
               ),
               SizedBox(height: 30.h),
               SizedBox(
-                height: 0.73.sh,
+                height: 0.6.sh,
                 child: ListView.separated(
                   itemBuilder: (context, index) {
                     return Row(
@@ -51,13 +51,13 @@ class CartScreen extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             mainAxisSize: MainAxisSize.max,
                             children: [
-                              Text('${controller.cart[index].name}'),
+                              Text('${controller.product[index].name}'),
                               Text(
-                                '${controller.cart[index].value}',
+                                '${controller.product[index].value}',
                                 style: ThemeProvider.hintTextStyle,
                               ),
                               Text(
-                                '${Envirmoent.countrySymbolMoney} ${controller.cart[index].price}',
+                                '${Envirmoent.countrySymbolMoney} ${controller.product[index].price}',
                                 style: TextStyle(color: ThemeProvider.appColor),
                               )
                             ],

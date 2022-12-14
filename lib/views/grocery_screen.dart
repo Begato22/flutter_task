@@ -4,6 +4,7 @@ import 'package:flutter_task/controllers/grocery_controller.dart';
 import 'package:flutter_task/envirmoent.dart';
 import 'package:flutter_task/utils/app_dimensions.dart';
 import 'package:flutter_task/utils/custom_widgets/custom_app_bar.dart';
+import 'package:flutter_task/utils/images.dart';
 import 'package:flutter_task/utils/theme_provider.dart';
 import 'package:get/get.dart';
 
@@ -246,6 +247,12 @@ class GroceryScreen extends StatelessWidget {
                   decoration: BoxDecoration(
                       color: ThemeProvider.bannersColor,
                       borderRadius: BorderRadius.circular(20.r)),
+                      child: Row(
+                        children: [
+                          Spacer(),
+                          Image.asset(AppImages.banner,width: 0.6.sw,),
+                        ],
+                      ),
                 )),
                 SizedBox(height: 40.h),
               ],

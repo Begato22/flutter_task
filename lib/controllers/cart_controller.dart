@@ -8,7 +8,6 @@ import 'package:get/get.dart';
 
 class CartController extends GetxController {
   List<dynamic> product = [];
-  List<dynamic> cart = [];
   List<CartModel> cartList = [];
   late int cartLen;
 
@@ -26,7 +25,7 @@ class CartController extends GetxController {
     var requestBody = ProductModel.fromJson(JsonData.products);
     if (requestBody.status == 200) {
       for (var element in requestBody.data) {
-        cart.add(element);
+        product.add(element);
         cartList.add(CartModel(
             productId: element.id,
             quantatiy: Random().nextInt(7) + 1,
@@ -52,7 +51,6 @@ class CartController extends GetxController {
 
   void inc(int index) {
     cartList[index].quantatiy++;
-    cartLen++;
     calcTotal();
     update();
   }
